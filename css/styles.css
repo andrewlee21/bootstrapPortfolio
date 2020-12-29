@@ -1,0 +1,62 @@
+.jumbotron {
+    padding:12px;
+    background-image: linear-gradient(to right, #20acac5d, #c4ffff, #20acac5d);
+    color: rgb(0, 0, 0);
+    margin: 0;
+   
+    
+}
+
+
+a:active {
+    color: pink;
+}
+
+a:hover {  
+    color: white;
+}
+
+
+body {
+    font-family: Open Sans, sans-serif;
+    
+}
+
+.tab-content {
+    padding: 2em;
+    background-color: rgba(211, 211, 211, 0.5);
+    border: solid rgba(211, 211, 211, 1);
+    border-width: 1px;
+
+}
+.nav-link {
+    color: black;
+    font-weight: 600;
+}
+
+#navTabs {
+    background-color: #20acac5d;
+    border: solid #20acac4f;
+    border-width: 1px;
+}
+
+#navTabs:active {
+    background-color: rgb(51, 148, 180);
+}
+
+.btn-dark {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-bottom: 0px;
+   
+}
+
+#widebutton {
+    width: 130px;
+}
+
+#solutions {
+    font-size: 30px;
+}
