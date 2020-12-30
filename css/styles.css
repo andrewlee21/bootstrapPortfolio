@@ -24,7 +24,7 @@ body {
 
 .tab-content {
     padding: 2em;
-    background-color: rgba(211, 211, 211, 0.5);
+    background-color: #20acac17;
     border: solid rgba(211, 211, 211, 1);
     border-width: 1px;
 
@@ -34,14 +34,16 @@ body {
     font-weight: 600;
 }
 
-#navTabs {
+.navtabs .nav-link{
     background-color: #20acac5d;
     border: solid #20acac4f;
     border-width: 1px;
 }
 
-#navTabs:active {
-    background-color: rgb(51, 148, 180);
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+    background-color: rgb(51, 141, 180);
+    color: #20acac;
 }
 
 .btn-dark {
@@ -59,4 +61,10 @@ body {
 
 #solutions {
     font-size: 30px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color:#20acac17;
+  border-bottom:#e2e2e2;
+  font-weight: bold;
 }
