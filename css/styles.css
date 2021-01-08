@@ -28,6 +28,7 @@ body {
     border: solid rgba(211, 211, 211, 1);
     border-width: 1px;
     border-top: none;
+    border-radius: 0px 20px 20px 20px;
 }
 .nav-link {
     color: black;
@@ -38,7 +39,8 @@ body {
     background-color: #20acac5d;
     border: solid #20acac4f;
     border-width: 1px;
-    
+    border-radius: 10px 10px 0px 0px;
+   
 }
 
 .nav-tabs .nav-link.active {
@@ -65,18 +67,20 @@ body {
     font-size: 30px;
 }
 
-  
   #carouselButton {
     position: absolute;
     right: 0;
     bottom: 0;
     background-color: aqua;
     z-index: 100; }
-  
-  
-
     
     .navbar {
     background-color: #901CAD; }
 
-  
+  .middle-section {
+      background-color: #20acac1e;
+  }
+  .rcorners1 {
+    border-radius: 25px;
+   
+  }
