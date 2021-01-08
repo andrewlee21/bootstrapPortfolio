@@ -97,3 +97,7 @@ Carousel
     bottom: 0;
     background-color: aqua;
     z-index: 100; }
+
+    footer {
+        background-color: #20acac1e;
+    }
