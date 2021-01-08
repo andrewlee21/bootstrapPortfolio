@@ -1,0 +1,282 @@
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link
+    rel="stylesheet"
+    href="node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
+    <link
+    rel="stylesheet"
+    href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+
+    <title>Bootstrap Portfolio Project: SaaS Front End</title>
+</head>
+ 
+
+
+<body>
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-light bg-light p-0 m-0">
+                    <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" class="ml-3"  height="30" class="d-inline-block align-top" alt="">
+                        
+                    </a>
+                </nav>
+                <div class="col">
+                    <ul class="nav justify-content-end align-items-center">
+                        <li class="nav-item  px-4">
+                        <a class="nav-link active" href="#solutions">Solutions</a>
+                        </li>
+                        <li class="nav-item  px-4">
+                        <a class="nav-link" href="#integrations.html">Integrations</a>
+                        </li>
+                        <li class="nav-item  px-4">
+                        <a role="button" data-toggle="modal" data-target="#loginModal" class="nav-link" href="#">Log In</a>
+                        </li>
+                        <li class="px-4">
+                            <button class="btn btn-dark" role="button" data-toggle="modal" data-target="#requestDemo">Request Demo </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Request Demo Modal -->
+        <div id="requestDemo" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Request Demo</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                    <form id="reserveForm" action="">
+                        <div class="row form-group">
+                        <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                        <div class="col">
+                            <select class="form-control" name="numCampers" id="numCampers">
+                            <option selected>Select...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="row form-group">
+                        <label class="col-sm-6 col-form-label" for="date">Date</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="date" name="date" id="date" placeholder="date"> 
+                        </div>   
+                        </div>
+                        <div class="row form-group">
+                        <label for="" class="col-form-label col-sm-6">Campsite Type</label>
+                        <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-success active">
+                                <input name="siteType" id="siteTent" value="tent" type="checkbox" checked autocomplete="off"> Tent
+                            </label>
+                            </div>
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input name="siteType" id="siteRV" value="RV" type="checkbox" checked autocomplete="off"> RV
+                            </label>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col">
+                            <button class="btn btn-secondary" data-dismiss="modal" >Cancel</button>
+                            <button class="btn btn-info" type="submit">Search</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <form action="">
+                      <div class="form-row">
+                        <div class="form-group col-12">
+                          <label for="loginEmail" class="sr-only">Email Address</label>
+                          <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                        </div>
+                        <div class="form-group col-12">
+                          <label for="loginPassword" class="sr-only">Password</label>
+                          <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                        </div>
+                        <div class="col">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label for="form-check-label">Remember Me</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+                          Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-auto">Sign In</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        
+    </header>
+
+   <div class="container">
+       <div class="row pt-4 pb-0">
+           <div class="col-sm-5 pt-5 pl-4">
+                <h1><strong>Don't grow in the dark.</strong></h1>
+                <h5>
+                    The solution for optimizing data management across cannabis business processes.
+                </h5>
+                <h5>
+                    Integrate all your data and get the most out of your traceability systems. 
+                </h5>
+                <button id="wideButton" class="btn btn-dark mt-4 ml-2">
+                    Learn More
+                </button>
+           </div>
+           <div class="col-sm-7 pt-2 text-center ">
+                <img width="80%" height="auto" src="img/topright.PNG" alt="placeholder">
+           </div>
+       </div>
+       <hr style="text-align:left;margin-left:0">
+
+
+       <div class="row text-center p-4">
+            <div class="col-sm-4">
+                <i class="fas fa-chart-bar fa-3x p-3"></i>
+                <h4 class="pb-2"
+                >Data Integration</h4>
+                <p class="px-4">
+                Why track data if it stays separate from all the other aspects of your business? Breakdown the silo effect by using our data integration tools.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-user-cog fa-3x p-3"></i>
+                <h4 class="pb-2"
+                >Full Customization</h4>
+                <p class="px-4">
+                A consultant will work with you through the onboarding process and beyond to customize our software to fit your specific business processes and needs. 
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-file-invoice fa-3x p-3"></i>
+                <h4 class="pb-2"
+                >Tangible Outputs</h4>
+                <p class="px-4">
+                Come away with useful sales, production, processing, and fulfillment reports, worksheets, schedules as well as cost analysis non-cannabis inventory tracking. 
+                </p>
+            </div>
+       </div>
+
+       <hr>
+
+       <div class="row row-content">
+        <div class="col py-3">
+          <h3 id="solutions" class="py-2" style="font-weight:bold">Solutions</h3>
+          <ul class="nav nav-tabs">
+            <li  class="nav-item"><a id="navTabs" class="nav-link active" role="tab" data-toggle="tab" href="#dataTracking">Data Tracking</a></li>
+            <li  class="nav-item"><a id="navTabs" class="nav-link" role="tab" data-toggle="tab" href="#automation">Automation</a></li>
+            <li  class="nav-item"><a id="navTabs" class="nav-link" role="tab" data-toggle="tab" href="#dataIntegrations">Data Integrations</a></li>
+            <li  class="nav-item"><a id="navTabs" class="nav-link" role="tab" data-toggle="tab" href="#analysis">Analysis & Reports</a></li>
+            <li  class="nav-item"><a id="navTabs" class="nav-link" role="tab" data-toggle="tab" href="#customization">Customization</a></li>
+          </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" role="tabpanel" id="dataTracking">
+                <h4>Data Tracking<small></small></h4>
+                <p class="d-none d-sm-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum, mauris ut accumsan iaculis, nunc urna rutrum mi, et pharetra ex tortor molestie est. Etiam non semper lacus, tristique condimentum nisl. Aenean nibh ante, feugiat ac augue sit amet, mattis mattis augue. Etiam eget risus turpis. Nunc commodo ultricies lacus commodo egestas. Donec ac blandit diam. Sed fringilla eu diam non sodales. Sed feugiat diam justo. Maecenas vehicula dictum metus, non tristique dui eleifend sollicitudin. Mauris mi ex, porta eget eros id, porttitor euismod lacus. Etiam vel lobortis nulla, vitae accumsan nulla. Suspendisse scelerisque dapibus dignissim. Nunc eu mollis orci. Nunc at aliquam diam, id pretium mauris.
+                </p>
+          </div>
+          <div class="tab-pane fade show" role="tabpanel" id="automation">
+            <h4>
+              Automation <small></small>
+            </h4>
+            <p class="d-none d-sm-block">
+                Mauris id mi quis urna ornare consequat vitae et orci. Sed eget est efficitur, congue nisl ac, scelerisque magna. Curabitur venenatis, tortor ac pellentesque elementum, quam enim tincidunt nisi, sit amet viverra orci tellus sit amet sapien. Suspendisse laoreet sem vitae massa accumsan luctus. Maecenas viverra nisi mi, quis laoreet lectus suscipit sed. Nulla molestie orci et mattis aliquet. In fermentum malesuada dolor. Suspendisse diam nulla, volutpat ut elementum nec, vestibulum et felis. Ut ut tellus et ex volutpat semper. Quisque interdum pretium ligula id volutpat.
+            </p>
+          </div>
+          <div class="tab-pane fade show" role="tabpanel" id="dataIntegrations">
+            <h4>
+              Data Integrations<small></small>
+            </h4>
+            <p class="d-none d-sm-block">
+                Donec faucibus ligula a arcu rutrum, a posuere elit ultricies. Proin efficitur sapien at neque varius ullamcorper. Sed tincidunt dui massa, sed vestibulum ipsum sollicitudin sit amet. Nunc neque sapien, ullamcorper nec justo eget, elementum scelerisque dui. Integer gravida lectus vel facilisis lobortis. Proin fermentum libero nec cursus fringilla. Aliquam sem sapien, pulvinar sit amet rhoncus a, dictum ut dui. Nulla porttitor pretium felis, vitae ultrices est cursus sit amet. Aenean vestibulum mauris a porta consectetur. Suspendisse potenti. Sed id magna in massa rutrum elementum sit amet nec enim. Donec varius magna in nisi facilisis, non lobortis purus feugiat. Morbi elementum aliquam nisi et pulvinar. Suspendisse consectetur elit eu nisi commodo posuere. Donec vitae neque nec eros dapibus tincidunt. Suspendisse ut justo sem.
+            </p>
+          </div>
+          <div class="tab-pane fade show" role="tabpanel" id="analysis">
+            <h4>
+              Analysis & Reports<small></small>
+            </h4>
+            <p class="d-none d-sm-block">
+                Donec ac magna lacus. Nulla lectus arcu, eleifend vitae facilisis aliquet, vestibulum sit amet elit. Maecenas vulputate, dolor vel mattis fringilla, ex ligula rutrum est, a viverra lorem ligula at augue. Nam eu ex a erat mattis accumsan. Vestibulum convallis eget dui at fringilla. Donec sed enim tempus, fermentum nisl sed, ullamcorper mauris. Morbi aliquam scelerisque mauris nec consequat. Proin sodales ligula est, in hendrerit tellus aliquam sit amet.
+            </p>
+          </div>
+          <div class="tab-pane fade show" role="tabpanel" id="customization">
+            <h4>Customization <small></small></h4>
+            <p class="d-none d-sm-block">
+                Etiam ut quam justo. Proin consectetur tempor augue eget viverra. Duis id nulla molestie orci placerat pulvinar. Fusce cursus ipsum eros, vitae semper neque tristique et. Donec volutpat nulla massa. Morbi venenatis, purus lobortis auctor posuere, elit sapien ornare elit, vulputate consectetur tellus augue id nunc. Donec tempor nisi non urna venenatis, ac venenatis nisi fringilla. Morbi tristique, diam quis fringilla pellentesque, leo eros vestibulum leo, id hendrerit elit tellus eget mi. Vestibulum sagittis elementum tortor vitae venenatis. Etiam accumsan ex mi, id consectetur metus auctor nec.
+            </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+   </div>
+   <hr style="text-align:left;margin-left:0">
+    
+  
+
+    <footer >
+       <div class="text-center">
+           Footer
+        </div>
+    </footer>
+    <br>
+    <br>
+
+<!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
