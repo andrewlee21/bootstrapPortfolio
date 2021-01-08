@@ -70,19 +70,13 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
+    background-color: aqua;
     z-index: 100; }
   
-  #reserveModal .modal-header {
-    background-color: #17a2b8;
-    color: white; }
   
-  #loginModal .modal-header {
-    background-color: #901CAD;
-    color: white; }
+
     
     .navbar {
     background-color: #901CAD; }
 
-    .modal-backdrop {
-        z-index: 1020;
-    }
+  
