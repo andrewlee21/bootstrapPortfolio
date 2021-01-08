@@ -30,6 +30,9 @@ body {
     border-top: none;
     border-radius: 0px 20px 20px 20px;
 }
+/****************************
+Nav
+****************************/
 .nav-link {
     color: black;
     font-weight: 600;
@@ -59,28 +62,38 @@ body {
    
 }
 
-#widebutton {
-    width: 130px;
-}
 
 #solutions {
     font-size: 30px;
 }
 
+/****************************
+Middle Section
+****************************/
+  .middle-section {
+      background-color: #20acac1e;
+  }
+  .rcorners1 {
+    border-radius: 25px;
+  }
+  #widebutton {
+    width: 130px;
+}
+
+/****************************
+Carousel
+****************************/
+  #carousel img{
+    width: 80px;
+
+    height: auto;
+    
+    max-width: 80px;
+    vertical-align: middle;
+  }
   #carouselButton {
     position: absolute;
     right: 0;
     bottom: 0;
     background-color: aqua;
     z-index: 100; }
-    
-    .navbar {
-    background-color: #901CAD; }
-
-  .middle-section {
-      background-color: #20acac1e;
-  }
-  .rcorners1 {
-    border-radius: 25px;
-   
-  }
